@@ -1,151 +1,151 @@
 # OpenClaw
 
-[![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/mithun50/openclaw-termux/releases/latest)
-[![Build Flutter APK & AAB](https://github.com/mithun50/openclaw-termux/actions/workflows/flutter-build.yml/badge.svg)](https://github.com/mithun50/openclaw-termux/actions/workflows/flutter-build.yml)
-[![npm version](https://img.shields.io/npm/v/openclaw-termux?color=blue&label=npm)](https://www.npmjs.com/package/openclaw-termux)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![下载 APK](https://img.shields.io/badge/下载-APK-green?style=for-the-badge&logo=android)](https://github.com/Gitronlee/openclaw-termux/releases/latest)
+[![构建 Flutter APK & AAB](https://github.com/Gitronlee/openclaw-termux/actions/workflows/flutter-build.yml/badge.svg)](https://github.com/Gitronlee/openclaw-termux/actions/workflows/flutter-build.yml)
+[![npm 版本](https://img.shields.io/npm/v/openclaw-termux?color=blue&label=npm)](https://www.npmjs.com/package/openclaw-termux)
+[![许可证: MIT](https://img.shields.io/badge/许可证-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-22-green?logo=node.js)](https://nodejs.org/)
 [![Android](https://img.shields.io/badge/Android-10%2B-brightgreen?logo=android)](https://www.android.com/)
 [![Flutter](https://img.shields.io/badge/Flutter-3.24-02569B?logo=flutter)](https://flutter.dev/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/mithun50/openclaw-termux/pulls)
+[![欢迎提交 PR](https://img.shields.io/badge/PR-欢迎-brightgreen.svg)](https://github.com/Gitronlee/openclaw-termux/pulls)
 
 <p align="center">
-  <img src="assets/ic_launcher.png" alt="OpenClaw App Mockup" width="700"/>
+  <img src="assets/ic_launcher.png" alt="OpenClaw 应用预览" width="700"/>
 </p>
 
-> Run **OpenClaw AI Gateway** on Android — standalone Flutter app with built-in terminal, web dashboard, optional dev tools, and one-tap setup. Also available as a Termux CLI package.
+> 在 Android 上运行 **OpenClaw AI 网关** — 独立的 Flutter 应用，内置终端、Web 仪表板、可选的开发工具，一键设置。也可作为 Termux CLI 包使用。
 
 ---
 
-## Screenshots
+## 截图
 
 <table align="center">
   <tr>
-    <td align="center"><img src="assets/dashboard.png" alt="Dashboard" width="220"/><br/><b>Dashboard</b></td>
-    <td align="center"><img src="assets/setupscreen.png" alt="Setup" width="220"/><br/><b>Setup Wizard</b></td>
-    <td align="center"><img src="assets/onboardingscreen.png" alt="Onboarding" width="220"/><br/><b>Onboarding</b></td>
+    <td align="center"><img src="assets/dashboard.png" alt="仪表板" width="220"/><br/><b>仪表板</b></td>
+    <td align="center"><img src="assets/setupscreen.png" alt="设置" width="220"/><br/><b>设置向导</b></td>
+    <td align="center"><img src="assets/onboardingscreen.png" alt="引导" width="220"/><br/><b>引导</b></td>
   </tr>
   <tr>
-    <td align="center"><img src="assets/websscreen.png" alt="Web Dashboard" width="220"/><br/><b>Web Dashboard</b></td>
-    <td align="center"><img src="assets/logscreen.png" alt="Logs" width="220"/><br/><b>Logs</b></td>
-    <td align="center"><img src="assets/settingsscreen.png" alt="Settings" width="220"/><br/><b>Settings</b></td>
+    <td align="center"><img src="assets/websscreen.png" alt="Web 仪表板" width="220"/><br/><b>Web 仪表板</b></td>
+    <td align="center"><img src="assets/logscreen.png" alt="日志" width="220"/><br/><b>日志</b></td>
+    <td align="center"><img src="assets/settingsscreen.png" alt="设置" width="220"/><br/><b>设置</b></td>
   </tr>
 </table>
 
 ---
 
-## What is OpenClaw?
+## 什么是 OpenClaw？
 
-OpenClaw brings the [OpenClaw](https://github.com/anthropics/openclaw) AI gateway to Android. It sets up a full Ubuntu environment via proot, installs Node.js and OpenClaw, and provides a native Flutter UI to manage everything — no root required.
+OpenClaw 将 [OpenClaw](https://github.com/anthropics/openclaw) AI 网关带到 Android。它通过 proot 设置完整的 Ubuntu 环境，安装 Node.js 和 OpenClaw，并提供原生 Flutter UI 来管理所有内容 — 无需 root 权限。
 
-### Two Ways to Use
+### 两种使用方式
 
-| | **Flutter App** (Standalone) | **Termux CLI** |
+| | **Flutter 应用**（独立） | **Termux CLI** |
 |---|---|---|
-| Install | Build APK or download release | `npm install -g openclaw-termux` |
-| Setup | Tap "Begin Setup" | `openclawx setup` |
-| Gateway | Tap "Start Gateway" | `openclawx start` |
-| Terminal | Built-in terminal emulator | Termux shell |
-| Dashboard | Built-in WebView | Browser at `localhost:18789` |
+| 安装 | 构建 APK 或下载发布版本 | `npm install -g openclaw-termux` |
+| 设置 | 点击「开始设置」 | `openclawx setup` |
+| 网关 | 点击「启动网关」 | `openclawx start` |
+| 终端 | 内置终端模拟器 | Termux shell |
+| 仪表板 | 内置 WebView | 浏览器访问 `localhost:18789` |
 
 ---
 
-## Features
+## 功能特性
 
-### Flutter App
-- **One-Tap Setup** — Downloads Ubuntu rootfs, Node.js 22, and OpenClaw automatically
-- **Built-in Terminal** — Full terminal emulator with extra keys toolbar, copy/paste, clickable URLs
-- **Gateway Controls** — Start/stop gateway with status indicator and health checks
-- **AI Providers** — Configure API keys and select models for 15 providers including 8 Chinese models (Anthropic, OpenAI, Google Gemini, OpenRouter, NVIDIA NIM, DeepSeek, xAI, 智谱GLM, 百度文心, 通义千问, Moonshot, 讯飞星火, MiniMax, 百川, 零一万物)
-- **SSH Remote Access** — Start/stop SSH server, set root password, view connection info with copyable commands
-- **Configure Menu** — Run `openclaw configure` in a built-in terminal to manage gateway settings
-- **Node Device Capabilities** — 7 capabilities (15 commands) exposed to AI via WebSocket node protocol
-- **Token URL Display** — Captures auth token from onboarding, shows it with a copy button
-- **Web Dashboard** — Embedded WebView loads the dashboard with authentication token
-- **View Logs** — Real-time gateway log viewer with search/filter
-- **Onboarding** — Configure API keys and binding directly in-app
-- **Optional Packages** — Install Go (Golang), Homebrew, and OpenSSH as optional dev tools
-- **Settings** — Auto-start, battery optimization, system info, package status, re-run setup
-- **Foreground Service** — Keeps the gateway alive in the background with uptime tracking
-- **Setup Notifications** — Progress bar notifications during environment setup
+### Flutter 应用
+- **一键设置** — 自动下载 Ubuntu rootfs、Node.js 22 和 OpenClaw
+- **内置终端** — 完整的终端模拟器，带额外按键工具栏、复制/粘贴、可点击的 URL
+- **网关控制** — 启动/停止网关，带状态指示器和健康检查
+- **AI 提供商** — 为 15 个提供商配置 API 密钥和选择模型，包括 8 个中文模型（Anthropic、OpenAI、Google Gemini、OpenRouter、NVIDIA NIM、DeepSeek、xAI、智谱 GLM、百度文心、通义千问、Moonshot（Kimi）、讯飞星火、MiniMax、百川、零一万物）
+- **SSH 远程访问** — 启动/停止 SSH 服务器，设置 root 密码，查看连接信息和可复制命令
+- **配置菜单** — 在内置终端中运行 `openclaw configure` 来管理网关设置
+- **节点设备功能** — 通过 WebSocket 节点协议向 AI 暴露 7 个功能（15 个命令）
+- **Token URL 显示** — 从引导中捕获认证 token，显示带复制按钮
+- **Web 仪表板** — 嵌入式 WebView 加载带有认证 token 的仪表板
+- **查看日志** — 实时网关日志查看器，带搜索/过滤功能
+- **引导** — 直接在应用中配置 API 密钥和绑定
+- **可选包** - 安装 Go (Golang)、Homebrew 和 OpenSSH 作为可选开发工具
+- **设置** — 自动启动、电池优化、系统信息、包状态、重新运行设置
+- **前台服务** — 保持网关在后台运行，带正常运行时间跟踪
+- **设置通知** — 环境设置期间带有进度条的通知
 
-### Optional Packages
+### 可选包
 
-After the initial setup completes, you can optionally install development tools directly from the app:
+初始设置完成后，您可以直接从应用中选择安装开发工具：
 
-| Package | Install Method | Size |
+| 包 | 安装方法 | 大小 |
 |---------|---------------|------|
 | **Go (Golang)** | `apt install golang` | ~150 MB |
-| **Homebrew** | Official installer (with root workaround) | ~500 MB |
+| **Homebrew** | 官方安装程序（带 root 变通方法） | ~500 MB |
 | **OpenSSH** | `apt install openssh-server` | ~10 MB |
 
-These are accessible from:
-- **Setup Wizard** — Package cards appear after setup completes
-- **Dashboard** — "Packages" card in Quick Actions
-- **Settings** — Shows installation status under System Info
+这些可以从以下位置访问：
+- **设置向导** — 设置完成后出现包卡片
+- **仪表板** — 快速操作中的「包」卡片
+- **设置** — 在系统信息下显示安装状态
 
-### Node Device Capabilities
+### 节点设备功能
 
-The Flutter app connects to the gateway as a **node**, exposing Android hardware to the AI. Permissions are requested proactively when the node is enabled.
+Flutter 应用作为**节点**连接到网关，向 AI 暴露 Android 硬件。启用节点时会主动请求权限。
 
-| Capability | Commands | Permission |
+| 功能 | 命令 | 权限 |
 |------------|----------|------------|
-| **Camera** | `camera.snap`, `camera.clip`, `camera.list` | Camera |
-| **Canvas** | `canvas.navigate`, `canvas.eval`, `canvas.snapshot` | None (not implemented) |
-| **Flash** | `flash.on`, `flash.off`, `flash.toggle`, `flash.status` | Camera (torch) |
-| **Location** | `location.get` | Location |
-| **Screen** | `screen.record` | MediaProjection consent |
-| **Sensor** | `sensor.read`, `sensor.list` | Body Sensors |
-| **Haptic** | `haptic.vibrate` | None |
+| **相机** | `camera.snap`, `camera.clip`, `camera.list` | 相机 |
+| **画布** | `canvas.navigate`, `canvas.eval`, `canvas.snapshot` | 无（未实现） |
+| **闪光灯** | `flash.on`, `flash.off`, `flash.toggle`, `flash.status` | 相机（手电筒） |
+| **位置** | `location.get` | 位置 |
+| **屏幕** | `screen.record` | MediaProject 同意 |
+| **传感器** | `sensor.read`, `sensor.list` | 身体传感器 |
+| **触觉** | `haptic.vibrate` | 无 |
 
-The gateway's `openclaw.json` is automatically patched before startup to clear `denyCommands` and set `allowCommands` for all 15 commands.
+网关的 `openclaw.json` 会在启动前自动打补丁，以清除 `denyCommands` 并为所有 15 个命令设置 `allowCommands`。
 
 ### Termux CLI
-- **One-Command Setup** — Installs proot-distro, Ubuntu, Node.js 22, and OpenClaw
-- **Bionic Bypass** — Fixes `os.networkInterfaces()` crash on Android's Bionic libc
-- **Smart Loading** — Shows spinner until the gateway is ready
-- **Pass-through Commands** — Run any OpenClaw command via `openclawx`
+- **一键设置** — 安装 proot-distro、Ubuntu、Node.js 22 和 OpenClaw
+- **Bionic 旁路** — 修复 Android 的 Bionic libc 上的 `os.networkInterfaces()` 崩溃
+- **智能加载** — 显示旋转加载器直到网关就绪
+- **透传命令** — 通过 `openclawx` 运行任何 OpenClaw 命令
 
 ---
 
-## Important Warnings
+## 重要警告
 
-> **Storage Permission** — This app does **NOT** need full storage access to function. If prompted, **deny** the storage permission unless you specifically need proot to access `/sdcard`. Granting `MANAGE_EXTERNAL_STORAGE` allows the proot environment to read and modify **all files** on your device including photos, downloads, and documents. Previous versions requested this permission automatically on launch, which could lead to unintended data loss (see [#67](https://github.com/mithun50/openclaw-termux/issues/67), [#63](https://github.com/mithun50/openclaw-termux/issues/63)). This has been fixed — storage access is now opt-in from Settings only.
+> **存储权限** — 此应用**不需要**完整的存储访问即可运行。如果提示，**拒绝**存储权限，除非您特别需要 proot 访问 `/sdcard`。授予权限后，`MANAGE_EXTERNAL_STORAGE` 允许 proot 环境读取和修改设备上的**所有文件**，包括照片、下载和文档。以前的版本在启动时自动请求此权限，这可能导致意外数据丢失（参见 [#67](https://github.com/mithun50/openclaw-termux/issues/67)、[#63](https://github.com/mithun50/openclaw-termux/issues/63)）。这已修复 — 存储访问现在只能从设置中选择。
 
-> **Battery Optimization** — Disable battery optimization for the app in Android Settings to prevent Android from killing the gateway process in the background. Without this, the gateway may crash silently after a few minutes.
+> **电池优化** — 在 Android 设置中禁用应用的电池优化，以防止 Android 在后台杀死网关进程。没有这个，网关可能会在几分钟后静默崩溃。
 
-> **First Launch** — The initial setup downloads ~500MB (Ubuntu rootfs + Node.js). Ensure you have a stable internet connection and sufficient storage before starting.
+> **首次启动** — 初始设置下载约 500MB（Ubuntu rootfs + Node.js）。在开始之前，请确保您有稳定的互联网连接和足够的存储空间。
 
 ---
 
-## Quick Start
+## 快速开始
 
-### Flutter App (Recommended)
+### Flutter 应用（推荐）
 
-1. Download the latest APK from [Releases](https://github.com/mithun50/openclaw-termux/releases)
-2. Install the APK on your Android device
-3. Open the app and tap **Begin Setup**
-4. After setup completes, optionally install **Go** or **Homebrew** from the package cards
-5. Configure your API keys in **Onboarding**
-6. Tap **Start Gateway** on the dashboard
+1. 从「[发布版本](https://github.com/Gitronlee/openclaw-termux/releases)」下载最新的 APK
+2. 在您的 Android 设备上安装 APK
+3. 打开应用并点击**「开始设置」**
+4. 设置完成后，从包卡片中选择安装 **Go** 或 **Homebrew**
+5. 在**「引导」**中配置您的 API 密钥
+6. 在仪表板上点击**「启动网关」**
 
-Or build from source:
+或从源代码构建：
 
 ```bash
-git clone https://github.com/mithun50/openclaw-termux.git
+git clone https://github.com/Gitronlee/openclaw-termux.git
 cd openclaw-termux/flutter_app
 flutter build apk --release
 ```
 
 ### Termux CLI
 
-#### One-liner (recommended)
+#### 一行命令（推荐）
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mithun50/openclaw-termux/main/install.sh | bash
+curl -fsSL https://ghp.ci/https://raw.githubusercontent.com/Gitronlee/openclaw-termux/cn/install.sh | bash
 ```
 
-#### Or via npm
+#### 或通过 npm
 
 ```bash
 npm install -g openclaw-termux
@@ -154,208 +154,208 @@ openclawx setup
 
 ---
 
-## Requirements
+## 系统要求
 
-| Requirement | Details |
+| 要求 | 详情 |
 |-------------|---------|
-| **Android** | 10 or higher (API 29) |
-| **Storage** | ~500MB for Ubuntu + Node.js + OpenClaw |
-| **Architectures** | arm64-v8a, armeabi-v7a, x86_64 |
-| **Termux** (CLI only) | From [F-Droid](https://f-droid.org/packages/com.termux/) (NOT Play Store) |
+| **Android** | 10 或更高版本（API 29） |
+| **存储** | 约 500MB 用于 Ubuntu + Node.js + OpenClaw |
+| **架构** | arm64-v8a、armeabi-v7a、x86_64 |
+| **Termux**（仅 CLI） | 从 [F-Droid](https://f-droid.org/packages/com.termux/)（非 Play Store）|
 
 ---
 
-## CLI Usage
+## CLI 使用
 
 ```bash
-# First-time setup (installs proot + Ubuntu + Node.js + OpenClaw)
+# 首次设置（安装 proot + Ubuntu + Node.js + OpenClaw）
 openclawx setup
 
-# Check installation status
+# 检查安装状态
 openclawx status
 
-# Start OpenClaw gateway
+# 启动 OpenClaw 网关
 openclawx start
 
-# Run onboarding to configure API keys
+# 运行引导以配置 API 密钥
 openclawx onboarding
 
-# Enter Ubuntu shell
+# 进入 Ubuntu shell
 openclawx shell
 
-# Any OpenClaw command works directly
+# 任何 OpenClaw 命令都可以直接运行
 openclawx doctor
 openclawx gateway --verbose
 ```
 
 ---
 
-## Architecture
+## 架构
 
 ```
 ┌───────────────────────────────────────────────────┐
-│                Flutter App (Dart)                 │
+│                Flutter 应用（Dart）               │
 │  ┌──────────┐ ┌──────────┐ ┌──────────────┐       │
-│  │ Terminal │ │ Gateway  │ │ Web Dashboard│       │
-│  │ Emulator │ │ Controls │ │   (WebView)  │       │
+│  │ 终端     │ │ 网关     │ │ Web 仪表板   │       │
+│  │ 模拟器   │ │ 控制器   │ │   (WebView)  │       │
 │  └─────┬────┘ └─────┬────┘ └──────┬───────┘       │
 │        │            │             │               │
 │  ┌─────┴────────────┴─────────────┴─────────────┐ │
-│  │           Native Bridge (Kotlin)             │ │
+│  │           原生桥接（Kotlin）                │ │
 │  └─────────────────┬────────────────────────────┘ │
 │                    │                              │
 │  ┌─────────────────┴────────────────────────────┐ │
-│  │         Node Provider (WebSocket)            │ │
-│  │  Camera · Flash · Location · Screen          │ │
-│  │  Sensor · Haptic · Canvas                    │ │
+│  │         节点提供商（WebSocket）             │ │
+│  │  相机 · 闪光灯 · 位置 · 屏幕                │ │
+│  │  传感器 · 触觉 · 画布                        │ │
 │  └─────────────────┬────────────────────────────┘ │
 └────────────────────┼──────────────────────────────┘
                      │
 ┌────────────────────┼──────────────────────────────┐
 │  proot-distro      │              Ubuntu          │
 │  ┌─────────────────┴──────────────────────────┐   │
-│  │   Node.js 22 + Bionic Bypass               │   │
+│  │   Node.js 22 + Bionic 旁路                │   │
 │  │   ┌─────────────────────────────────────┐  │   │
-│  │   │  OpenClaw AI Gateway                │  │   │
+│  │   │  OpenClaw AI 网关                  │  │   │
 │  │   │  http://localhost:18789             │  │   │
-│  │   │  ← Node WS: 15 device commands      │  │   │
+│  │   │  ← 节点 WS：15 个设备命令          │  │   │
 │  │   └─────────────────────────────────────┘  │   │
-│  │   Optional: Go, Homebrew                   │   │
+│  │   可选：Go、Homebrew                       │   │
 │  └────────────────────────────────────────────┘   │
 └───────────────────────────────────────────────────┘
 ```
 
-### Flutter App Structure
+### Flutter 应用结构
 
 ```
 flutter_app/lib/
-├── main.dart                  # App entry point
-├── constants.dart             # App constants, URLs, author info
+├── main.dart                  # 应用入口点
+├── constants.dart             # 应用常量、URL 、作者信息
 ├── models/
-│   ├── gateway_state.dart     # Gateway status, logs, token URL
-│   ├── node_state.dart        # Node connection status
-│   ├── node_frame.dart        # WebSocket frame model (req/res/event)
-│   ├── setup_state.dart       # Setup wizard progress
-│   ├── optional_package.dart  # Optional package metadata (Go, Homebrew)
-│   └── ai_provider.dart       # AI provider data model (15 providers, including 8 Chinese)
+│   ├── gateway_state.dart     # 网关状态、日志、token URL
+│   ├── node_state.dart        # 节点连接状态
+│   ├── node_frame.dart        # WebSocket 帧模型（请求/响应/事件）
+│   ├── setup_state.dart       # 设置向导进度
+│   ├── optional_package.dart  # 可选包元数据（Go、Homebrew）
+│   └── ai_provider.dart       # AI 提供商数据模型（15 个提供商，包括 8 个中文）
 ├── providers/
-│   ├── gateway_provider.dart  # Gateway state management
-│   ├── node_provider.dart     # Node capabilities + permission management
-│   └── setup_provider.dart    # Setup state management
+│   ├── gateway_provider.dart  # 网关状态管理
+│   ├── node_provider.dart     # 节点功能 + 权限管理
+│   └── setup_provider.dart    # 设置状态管理
 ├── screens/
-│   ├── splash_screen.dart     # Launch screen with routing
-│   ├── setup_wizard_screen.dart    # First-time setup + optional packages
-│   ├── onboarding_screen.dart      # API key configuration terminal
-│   ├── dashboard_screen.dart       # Main dashboard with quick actions
-│   ├── terminal_screen.dart        # Full terminal emulator
-│   ├── configure_screen.dart       # openclaw configure terminal
-│   ├── web_dashboard_screen.dart   # WebView for OpenClaw dashboard
-│   ├── providers_screen.dart       # AI provider list
-│   ├── provider_detail_screen.dart # API key + model configuration
-│   ├── ssh_screen.dart             # SSH server management
-│   ├── packages_screen.dart        # Optional package manager
-│   ├── package_install_screen.dart # Terminal-based package installer
-│   ├── logs_screen.dart            # Gateway log viewer
-│   └── settings_screen.dart        # App settings and about
+│   ├── splash_screen.dart     # 带路由的启动屏幕
+│   ├── setup_wizard_screen.dart    # 首次设置 + 可选包
+│   ├── onboarding_screen.dart      # API 密钥配置终端
+│   ├── dashboard_screen.dart       # 带快速操作的主仪表板
+│   ├── terminal_screen.dart        # 完整终端模拟器
+│   ├── configure_screen.dart       # openclaw configure 终端
+│   ├── web_dashboard_screen.dart   # OpenClaw 仪表板的 WebView
+│   ├── providers_screen.dart       # AI 提供商列表
+│   ├── provider_detail_screen.dart # API 密钥 + 模型配置
+│   ├── ssh_screen.dart             # SSH 服务器管理
+│   ├── packages_screen.dart        # 可选包管理器
+│   ├── package_install_screen.dart # 基于终端的包安装程序
+│   ├── logs_screen.dart            # 网关日志查看器
+│   └── settings_screen.dart        # 应用设置和关于
 ├── services/
-│   ├── native_bridge.dart     # Kotlin platform channel bridge
-│   ├── gateway_service.dart   # Gateway lifecycle, health checks, config patching
-│   ├── node_service.dart      # Node WebSocket connection + invoke handling
-│   ├── node_ws_service.dart   # Raw WebSocket transport
-│   ├── node_identity_service.dart # Device identity + crypto signing
-│   ├── terminal_service.dart  # proot shell configuration
-│   ├── bootstrap_service.dart # Environment setup orchestration
-│   ├── package_service.dart   # Optional package status checking
-│   ├── preferences_service.dart # Persistent settings (token URL, etc.)
-│   ├── provider_config_service.dart # AI provider config read/write
-│   ├── ssh_service.dart       # SSH server management via native bridge
+│   ├── native_bridge.dart     # Kotlin 平台通道桥接
+│   ├── gateway_service.dart   # 网关生命周期、健康检查、配置打补丁
+│   ├── node_service.dart      # 节点 WebSocket 连接 + 调用处理
+│   ├── node_ws_service.dart   # 原始 WebSocket 传输
+│   ├── node_identity_service.dart # 设备身份 + 加密签名
+│   ├── terminal_service.dart  # proot shell 配置
+│   ├── bootstrap_service.dart # 环境设置编排
+│   ├── package_service.dart   # 可选包状态检查
+│   ├── preferences_service.dart # 持久化设置（token URL 等）
+│   ├── provider_config_service.dart # AI 提供商配置读/写
+│   ├── ssh_service.dart       # 通过原生桥接管理 SSH 服务器
 │   └── capabilities/
-│       ├── capability_handler.dart   # Base class with permission handling
-│       ├── camera_capability.dart    # Photo/video capture
-│       ├── canvas_capability.dart    # WebView stub (NOT_IMPLEMENTED)
-│       ├── flash_capability.dart     # Torch on/off/toggle
-│       ├── location_capability.dart  # GPS with timeout + fallback
-│       ├── screen_capability.dart    # Screen recording via MediaProjection
-│       ├── sensor_capability.dart    # Accelerometer, gyroscope, etc.
-│       └── vibration_capability.dart # Haptic feedback
+│       ├── capability_handler.dart   # 带权限处理的基类
+│       ├── camera_capability.dart    # 照片/视频捕获
+│       ├── canvas_capability.dart    # WebView 存根（未实现）
+│       ├── flash_capability.dart     # 手电筒 开/关/切换
+│       ├── location_capability.dart  # 带超时 + 回退的 GPS
+│       ├── screen_capability.dart    # 通过 MediaProject 的屏幕录制
+│       ├── sensor_capability.dart    # 加速度计、陀螺仪等
+│       └── vibration_capability.dart # 触觉反馈
 └── widgets/
-    ├── gateway_controls.dart  # Start/stop, URL display, copy button
-    ├── node_controls.dart     # Node enable/disable, status badge
-    ├── terminal_toolbar.dart  # Extra keys (Tab, Ctrl, Esc, arrows)
-    ├── status_card.dart       # Reusable status card
-    └── progress_step.dart     # Setup wizard step indicator
+    ├── gateway_controls.dart  # 启动/停止、URL 显示、复制按钮
+    ├── node_controls.dart     # 节点启用/禁用、状态徽章
+    ├── terminal_toolbar.dart  # 额外按键（Tab、Ctrl、Esc、箭头）
+    ├── status_card.dart       # 可重用的状态卡片
+    └── progress_step.dart     # 设置向导步骤指示器
 ```
 
 ---
 
-## Configuration
+## 配置
 
-### Onboarding
+### 引导
 
-When running onboarding (in-app or via `openclawx onboarding`):
+运行引导时（在应用内或通过 `openclawx onboarding`）：
 
-- **Binding**: Select `Loopback (127.0.0.1)` for non-rooted devices
-- **API Keys**: Add your Gemini/OpenAI/Claude keys
-- **Token URL**: The app automatically captures and stores the auth token URL (e.g. `http://localhost:18789/#token=...`)
+- **绑定**：对于非 root 设备，选择 `Loopback (127.0.0.1)`
+- **API 密钥**：添加您的 Gemini/OpenAI/Claude 密钥
+- **Token URL**：应用自动捕获并存储认证 token URL（例如 `http://localhost:18789/#token=...`）
 
-### Battery Optimization
+### 电池优化
 
-> **Important:** Disable battery optimization for the app to keep the gateway alive in the background.
+> **重要**：禁用应用的电池优化以保持网关在后台运行。
 
-**For the Flutter app:** Settings > Battery Optimization > tap to disable
+**对于 Flutter 应用**：设置 > 电池优化 > 点击以禁用
 
-**For Termux:** Android Settings > Apps > Termux > Battery > **Unrestricted**
+**对于 Termux**：Android 设置 > 应用 > Termux > 电池 > **不受限制**
 
 ---
 
-## Dashboard
+## 仪表板
 
-Access the web dashboard at the token URL shown in the app (e.g. `http://localhost:18789/#token=...`).
+在应用中显示的 token URL 访问 Web 仪表板（例如 `http://localhost:18789/#token=...`）。
 
-The Flutter app automatically loads the dashboard with your auth token via the built-in WebView.
+Flutter 应用通过内置 WebView 自动加载带有您的认证 token 的仪表板。
 
-| Command | Description |
+| 命令 | 描述 |
 |---------|-------------|
-| `/status` | Check gateway status |
-| `/think high` | Enable high-quality thinking |
-| `/reset` | Reset session |
+| `/status` | 检查网关状态 |
+| `/think high` | 启用高质量思考 |
+| `/reset` | 重置会话 |
 
 ---
 
-## Troubleshooting
+## 故障排除
 
-### Files deleted or missing after using the app
+### 使用应用后文件被删除或丢失
 
-Versions before v1.8.4 automatically requested full storage access (`MANAGE_EXTERNAL_STORAGE`) on launch. Combined with symlinks inside the proot rootfs pointing to `/sdcard`, cleanup operations could follow those symlinks and delete real user files. **This has been fixed** — storage permission is no longer auto-requested, symlinks are not followed during deletion, and a path boundary check prevents any deletion outside the app's private directory. If you were affected, see [#67](https://github.com/mithun50/openclaw-termux/issues/67).
+v1.8.4 之前的版本在启动时自动请求完整的存储访问（`MANAGE_EXTERNAL_STORAGE`）。结合 proot rootfs 内指向 `/sdcard` 的符号链接，清理操作可能会跟随这些符号链接并删除真实的用户文件。**这已修复** — 不再自动请求存储权限，删除时不跟随符号链接，并且路径边界检查可防止应用私有目录外的任何删除。如果您受到影响，请参见 [#67](https://github.com/mithun50/openclaw-termux/issues/67)。
 
-To revoke storage permission: Android Settings > Apps > OpenClaw > Permissions > Files and media > Don't allow.
+要撤销存储权限：Android 设置 > 应用 > OpenClaw > 权限 > 文件和媒体 > 不允许。
 
-### Gateway won't start
+### 网关无法启动
 
 ```bash
-# Check status
+# 检查状态
 openclawx status
 
-# Re-run setup if needed
+# 如需要，重新运行设置
 openclawx setup
 
-# Make sure onboarding is complete
+# 确保引导已完成
 openclawx onboarding
 ```
 
-### "os.networkInterfaces" error
+### "os.networkInterfaces" 错误
 
-Bionic Bypass not configured. Run setup again:
+未配置 Bionic 旁路。再次运行设置：
 
 ```bash
 openclawx setup
 ```
 
-### Process killed in background
+### 进程在后台被杀死
 
-Disable battery optimization for the app in Android settings.
+在 Android 设置中禁用应用的电池优化。
 
-### Permission denied
+### 权限被拒绝
 
 ```bash
 termux-setup-storage
@@ -363,19 +363,19 @@ termux-setup-storage
 
 ---
 
-## Manual Setup
+## 手动设置
 
 <details>
-<summary>Click to expand manual installation steps</summary>
+<summary>点击展开手动安装步骤</summary>
 
-### 1. Install proot-distro and Ubuntu
+### 1. 安装 proot-distro 和 Ubuntu
 
 ```bash
 pkg update && pkg install -y proot-distro
 proot-distro install ubuntu
 ```
 
-### 2. Setup Node.js in Ubuntu
+### 2. 在 Ubuntu 中设置 Node.js
 
 ```bash
 proot-distro login ubuntu
@@ -385,7 +385,7 @@ apt install -y nodejs
 npm install -g openclaw
 ```
 
-### 3. Create Bionic Bypass
+### 3. 创建 Bionic 旁路
 
 ```bash
 mkdir -p ~/.openclaw
@@ -413,17 +413,17 @@ os.networkInterfaces = function() {
 EOF
 ```
 
-### 4. Add to bashrc
+### 4. 添加到 bashrc
 
 ```bash
 echo 'export NODE_OPTIONS="--require ~/.openclaw/bionic-bypass.js"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### 5. Run OpenClaw
+### 5. 运行 OpenClaw
 
 ```bash
-openclaw onboarding  # Select "Loopback (127.0.0.1)"
+openclaw onboarding  # 选择 "Loopback (127.0.0.1)"
 openclaw gateway --verbose
 ```
 
@@ -431,19 +431,19 @@ openclaw gateway --verbose
 
 ---
 
-## Contributing
+## 贡献
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+欢迎贡献！请随时提交 Pull Request。
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Fork 仓库
+2. 创建您的功能分支（`git checkout -b feature/amazing-feature`）
+3. 提交您的更改（`git commit -m 'Add amazing feature'`）
+4. 推送到分支（`git push origin feature/amazing-feature`）
+5. 打开 Pull Request
 
 ---
 
-## Author
+## 作者
 
 **Mithun Gowda B** | [NextGenX](https://play.google.com/store/apps/dev?id=8262374975871504599)
 
@@ -452,20 +452,28 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - Instagram: [@nexgenxplorer_nxg](https://www.instagram.com/nexgenxplorer_nxg)
 - YouTube: [@nexgenxplorer](https://youtube.com/@nexgenxplorer?si=UG-wBC8UIyeT4bbw)
 - Play Store: [NextGenX Apps](https://play.google.com/store/apps/dev?id=8262374975871504599)
-- Contact: [nxgextra@gmail.com](mailto:nxgextra@gmail.com)
+- 联系方式: [nxgextra@gmail.com](mailto:nxgextra@gmail.com)
+
+## 国内镜像分支维护者
+
+**Gitronlee** 
+
+- GitHub: [@Gitronlee](https://github.com/Gitronlee)
 
 ---
 
-## License
+## 许可证
 
-MIT License - see [LICENSE](LICENSE) file for details.
+MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
 
 ---
-## ⭐ Star History
+## ⭐ Star 历史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mithun50/openclaw-termux&type=Date)](https://star-history.com/#mithun50/openclaw-termux&Date)
+[![Star 历史图表](https://api.star-history.com/svg?repos=Gitronlee/openclaw-termux&type=Date)](https://star-history.com/#Gitronlee/openclaw-termux&Date)
 
 
 <p align="center">
-  Made with &#10084;&#65039; for the Android community by <a href="https://github.com/mithun50">Mithun Gowda B</a> | <b>NextGenX</b>
+  为 Android 社区用 &#10084;&#65039; 制作，作者 <a href="https://github.com/mithun50">Mithun Gowda B</a> | <b>NextGenX</b>
+  <br>
+  国内镜像分支维护：<a href="https://github.com/Gitronlee">Gitronlee</a>
 </p>

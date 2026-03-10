@@ -15,7 +15,7 @@ TMP_DIR=$(mktemp -d)
 
 trap 'rm -rf "$TMP_DIR"' EXIT
 
-TERMUX_REPO="https://packages.termux.dev/apt/termux-main"
+TERMUX_REPO="https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main"
 
 # Fetch a Termux package and extract binaries
 fetch_termux_pkg() {
