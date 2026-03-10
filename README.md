@@ -56,7 +56,7 @@ OpenClaw brings the [OpenClaw](https://github.com/anthropics/openclaw) AI gatewa
 - **One-Tap Setup** — Downloads Ubuntu rootfs, Node.js 22, and OpenClaw automatically
 - **Built-in Terminal** — Full terminal emulator with extra keys toolbar, copy/paste, clickable URLs
 - **Gateway Controls** — Start/stop gateway with status indicator and health checks
-- **AI Providers** — Configure API keys and select models for 7 providers (Anthropic, OpenAI, Google Gemini, OpenRouter, NVIDIA NIM, DeepSeek, xAI)
+- **AI Providers** — Configure API keys and select models for 15 providers including 8 Chinese models (Anthropic, OpenAI, Google Gemini, OpenRouter, NVIDIA NIM, DeepSeek, xAI, 智谱GLM, 百度文心, 通义千问, Moonshot, 讯飞星火, MiniMax, 百川, 零一万物)
 - **SSH Remote Access** — Start/stop SSH server, set root password, view connection info with copyable commands
 - **Configure Menu** — Run `openclaw configure` in a built-in terminal to manage gateway settings
 - **Node Device Capabilities** — 7 capabilities (15 commands) exposed to AI via WebSocket node protocol
@@ -237,7 +237,7 @@ flutter_app/lib/
 │   ├── node_frame.dart        # WebSocket frame model (req/res/event)
 │   ├── setup_state.dart       # Setup wizard progress
 │   ├── optional_package.dart  # Optional package metadata (Go, Homebrew)
-│   └── ai_provider.dart       # AI provider data model (7 providers)
+│   └── ai_provider.dart       # AI provider data model (15 providers, including 8 Chinese)
 ├── providers/
 │   ├── gateway_provider.dart  # Gateway state management
 │   ├── node_provider.dart     # Node capabilities + permission management

@@ -134,6 +134,157 @@ class AiProvider {
     apiKeyHint: 'xai-...',
   );
 
+  // ========== Chinese AI Providers ==========
+
+  static const zhipu = AiProvider(
+    id: 'zhipu',
+    name: '智谱 GLM',
+    description: '智谱AI的GLM系列大模型',
+    icon: Icons.smart_toy,
+    color: Color(0xFF1890FF),
+    baseUrl: 'https://open.bigmodel.cn/api/paas/v4',
+    defaultModels: [
+      'glm-4.7',
+      'glm-4.0',
+      'glm-4-plus',
+      'glm-4-flash',
+      'glm-3-turbo',
+    ],
+    apiKeyHint: '...',
+  );
+
+  static const wenxin = AiProvider(
+    id: 'wenxin',
+    name: '百度文心',
+    description: '百度文心一言大模型',
+    icon: Icons.auto_graph,
+    color: Color(0xFF2932E1),
+    baseUrl: 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop',
+    defaultModels: [
+      'ernie-4.0-turbo-8k',
+      'ernie-4.0-8k',
+      'ernie-3.5-turbo-8k',
+      'ernie-speed-128k',
+      'ernie-lite-pro-128k',
+    ],
+    apiKeyHint: '...'
+  );
+
+  static const qianwen = AiProvider(
+    id: 'qianwen',
+    name: '通义千问',
+    description: '阿里云通义千问大模型',
+    icon: Icons.cloud,
+    color: Color(0xFF0064C8),
+    baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+    defaultModels: [
+      'qwen-max-latest',
+      'qwen-plus-latest',
+      'qwen-turbo-latest',
+      'qwen-long',
+      'qwen-2.5-72b-instruct',
+    ],
+    apiKeyHint: 'sk-...'
+  );
+
+  static const moonshot = AiProvider(
+    id: 'moonshot',
+    name: 'Moonshot (Kimi)',
+    description: 'Moonshot AI的长文本大模型',
+    icon: Icons.rocket_launch,
+    color: Color(0xFF6B5CE7),
+    baseUrl: 'https://api.moonshot.cn/v1',
+    defaultModels: [
+      'moonshot-v1-128k',
+      'moonshot-v1-32k',
+      'moonshot-v1-8k',
+    ],
+    apiKeyHint: 'sk-...'
+  );
+
+  static const xunfei = AiProvider(
+    id: 'xunfei',
+    name: '讯飞星火',
+    description: '科大讯飞星火认知大模型',
+    icon: Icons.flash_on,
+    color: Color(0xFF2F54EB),
+    baseUrl: 'https://spark-api.xf-yun.com/v1',
+    defaultModels: [
+      'spark-4.0-ultra',
+      'spark-4.0',
+      'spark-pro-4.0',
+      'spark-3.5-max',
+      'spark-3.5-lite',
+    ],
+    apiKeyHint: '...'
+  );
+
+  static const minimax = AiProvider(
+    id: 'minimax',
+    name: 'MiniMax',
+    description: 'MiniMax的AI助手大模型',
+    icon: Icons.minimize,
+    color: Color(0xFF722ED1),
+    baseUrl: 'https://api.minimax.chat/v1',
+    defaultModels: [
+      'abab6.5s-chat',
+      'abab6.5-chat',
+      'abab5.5s-chat',
+      'abab5.5-chat',
+    ],
+    apiKeyHint: '...'
+  );
+
+  static const baichuan = AiProvider(
+    id: 'baichuan',
+    name: '百川',
+    description: '百川智能大模型',
+    icon: Icons.sailing,
+    color: Color(0xFF13C2C2),
+    baseUrl: 'https://api.baichuan-ai.com/v1',
+    defaultModels: [
+      'Baichuan4',
+      'Baichuan3-Turbo',
+      'Baichuan3-Turbo-128k',
+      'Baichuan2-Turbo',
+    ],
+    apiKeyHint: 'sk-...'
+  );
+
+  static const yi = AiProvider(
+    id: 'yi',
+    name: '零一万物',
+    description: '零一万物的Yi系列大模型',
+    icon: Icons.numbers,
+    color: Color(0xFF25B864),
+    baseUrl: 'https://api.lingyiwanwu.com/v1',
+    defaultModels: [
+      'yi-large',
+      'yi-large-turbo',
+      'yi-medium',
+      'yi-spark',
+      'yi-lightning',
+    ],
+    apiKeyHint: '...'
+  );
+
   /// All available AI providers.
-  static const all = [anthropic, openai, google, openrouter, nvidia, deepseek, xai];
+  static const all = [
+    anthropic,
+    openai,
+    google,
+    openrouter,
+    nvidia,
+    deepseek,
+    xai,
+    // Chinese providers
+    zhipu,
+    wenxin,
+    qianwen,
+    moonshot,
+    xunfei,
+    minimax,
+    baichuan,
+    yi,
+  ];
 }
