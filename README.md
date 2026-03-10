@@ -461,6 +461,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mithun50/openclaw-termux&type=Date)](https://star-history.com/#mithun50/openclaw-termux&Date)
+
 
 <p align="center">
   Made with &#10084;&#65039; for the Android community by <a href="https://github.com/mithun50">Mithun Gowda B</a> | <b>NextGenX</b>
